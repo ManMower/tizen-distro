@@ -1,7 +1,9 @@
 SECTION = "Graphics & UI Framework/Hardware Adaptation"
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
-SRC_URI += "file://0001-intel:-FixinitialMakeCurrentfordrawablesofmultiscreens.patch"
+#If not having this patch breaks your world please put these lines in the mesa recipe you're using
+#Adding it to all mesa builds obviously isn't long term viable - the patch no longer applies upstream
+#FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+#SRC_URI += "file://0001-intel:-FixinitialMakeCurrentfordrawablesofmultiscreens.patch"
 
 # Enabling gallium-llvm creates a dependency on llvm.
 # meta-openembedded provides that.
